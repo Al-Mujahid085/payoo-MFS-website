@@ -13,7 +13,7 @@
     <div class="mockup-phone w-fit flex flex-col mx-auto">
         <div class="camera"></div>
         <div class="display">
-            <div class="artboard artboard-demo phone-3">
+            <div class="artboard artboard-demo phone-3 ">
 
                 <div class="stats shadow">
                     <div class="stat flex flex-col items-center">
@@ -25,13 +25,14 @@
                 <div class="divider"></div>
 
                 <div>
-                    <button class="btn text-xl rounded-lg bg-orange-300"> Add Money</button>
-                    <button class="btn text-xl rounded-lg bg-purple-300"> Cash Out</button>
+                    <button id="show-add-money-btn" class="btn text-xl rounded-lg bg-orange-300"> Add Money</button>
+                    <button id="show-cash-out-btn" class="btn text-xl rounded-lg bg-purple-300"> Cash Out</button>
                 </div>
 
 
                 <div class="divider"></div>
-                <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <!-- start add money div -->
+                <div id="show-add-money-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl ">
                     <form class="card-body">
                       <div class="form-control">
                         <label class="label">
@@ -53,7 +54,31 @@
                       </div>
                     </form>
                   </div>
-
+                  <!-- end add money div  -->
+                <!-- start cash out div -->
+                <div id="show-cash-out-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Amount</span>
+                        </label>
+                        <input type="text" id="amount" placeholder="Amount" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Pin</span>
+                        </label>
+                        <input type="password" id="cashOut-pin-number" placeholder="pin" class="input input-bordered" required />
+                        <label class="label">
+                          
+                        </label>
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="cash-out" class="btn btn-primary">Cash Out</button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- end cash out div  -->
 
 
 
